@@ -1,0 +1,11 @@
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+insert_final_newline = false
+[*.{vue}]
+indent_size = 4
+[*.{js,ts}]
+indent_size = 2 # standard.js default

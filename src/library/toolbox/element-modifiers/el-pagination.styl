@@ -1,0 +1,24 @@
+$brandColor = #E39836
+
+.el-pagination
+    background #EBECED
+    position absolute
+    width 100%
+    bottom 0
+    padding 10px 0
+    text-align right
+
+    button.disabled
+        background-color transparent
+        color initial
+        opacity 0.05
+
+    .el-pager
+        li
+            vertical-align initial
+            &.active
+                border none
+                background-color transparent
+                color $brandColor
+                font-weight bold
+

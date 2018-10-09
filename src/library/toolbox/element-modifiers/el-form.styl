@@ -1,0 +1,16 @@
+
+.el-form-item__label
+    text-align left
+    font-size 16px
+
+.el-form-item.is-required .el-form-item__label:before
+    display none
+
+
+.el-form-item.is-required .el-form-item__label:after
+    content '(*)'
+    margin-left 4px
+
+.el-form-item.no-margin
+    .el-input
+        margin-bottom 0 !important

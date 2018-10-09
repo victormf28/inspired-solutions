@@ -1,0 +1,64 @@
+$brandColor = #E39836
+
+.el-menu-vertical
+    background-color transparent
+    height calc(100vh - 80px)
+    .icon
+        width 25px
+        height 30px
+        +above(1300px)
+            width 30px
+            height 30px
+
+        svg
+            path
+                fill grey
+
+.el-menu-item
+    text-align center
+    height auto
+    line-height 1.2
+    padding 12px 5px !important
+    white-space normal
+    box-sizing border-box
+    transition 0.3s all ease
+
+    +above(1300px)
+        padding 20px 5px !important
+    &:hover
+        background-color transparent
+        opacity 0.7
+        transition 0.3s all ease
+    p
+        margin-top 5px
+        margin-bottom 0
+        color grey
+        text-align center
+        +above(1300px)
+            margin-top 10px
+    &.is-active
+        position relative
+        pointer-events none
+        &:before
+            content ''
+            width 4px
+            background-color $brandColor
+            border-top-right-radius 2px
+            border-bottom-right-radius 2px
+            height 100%
+            position absolute
+            top 0
+            left 0
+        p
+            color white
+
+        .icon
+            svg
+                path
+                    fill $brandColor
+
+    &:last-child
+        position absolute
+        left 0
+        bottom 0
+        width 100%

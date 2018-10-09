@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", { "modules": false }]
+  ],
+  "plugins": [["component", [
+    {
+      "libraryName": "element-ui",
+      "styleLibraryName": "../../../src/library/toolbox/element-modifiers/my-theme"
+    }
+  ]], "syntax-dynamic-import", 'transform-object-rest-spread'],
+  "env": {
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
+}

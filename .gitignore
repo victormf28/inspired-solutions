@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+src/toolbox/element-modifiers/my-theme/
+src/concessionaire/library/toolbox/element-modifiers/my-theme
+dist/
+npm-debug.log
+yarn-error.log
+yarn.lock
+*.orig
+database_bk.json
+.tmp/
+lcov-report
+.nyc_output
+coverage/
+lcov.info
+.vscode/

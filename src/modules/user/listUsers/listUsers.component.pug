@@ -1,0 +1,36 @@
+div
+    h1 Lista de Usuarios
+    router-link(to="/nuevo-usuario") 
+        el-button Nuevo Usuario
+    br
+    br
+    el-table(
+        stripe,
+        :data='listUsers',
+        border='',
+        style='width: 100%',
+        v-loading.body="loadingTable"
+    )
+        el-table-column(property="name" label='Nombre')
+            template(slot-scope='scope')
+                span {{ scope.row.name }}
+
+        el-table-column(label='Edad')
+            template(slot-scope='scope')
+                span {{ scope.row.age }}
+
+        el-table-column(label='Email')
+            template(slot-scope='scope')
+                span {{ scope.row.email }}
+
+        el-table-column(label='Rol')
+            template(slot-scope='scope')
+                span {{ scope.row.accessRole }}
+
+        el-table-column(label='Acciones')
+            template(slot-scope='scope')
+                router-link(:to="`/editar-usuario-` + scope.row.id ")
+                    el-button 
+                        i.el-icon-edit
+                el-button(@click="onDeleteUser(scope.row.id)")
+                    i.el-icon-delete

@@ -3,35 +3,11 @@
 > A Vue.js project
 
 ## Build Setup
-
+Requiere: Node 6.10.0
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-tree
-export default {
-	props
-	data
-	components
-  
-	watch
-	computed
-		... mapState
-		... mapGetters
-		... mapActions
-		... mapMutations
-	methods
-
-	created
-	mounted
-}
+# serve with hot reload at localhost:4200
+>> npm run element 
+>> npm run local

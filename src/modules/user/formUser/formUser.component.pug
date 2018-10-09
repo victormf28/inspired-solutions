@@ -1,0 +1,26 @@
+div
+    h1 Nuevo Usuario
+    el-form(
+        ref='form',
+        :rules='rulesForm',
+        :model='form',
+        @submit.prevent.native=""
+        v-loading="loadingForm",
+        novalidate
+    )
+        el-form-item(label='Nombre', prop='name')
+            el-input(v-model='form.name', size="large")
+
+        el-form-item(label='Edad' , prop='age')
+            el-input(v-model='form.age', size="large", type="number")
+
+        el-form-item(label='Email' , prop='email')
+            el-input(v-model='form.email', size="large")
+
+        el-form-item(label='Rol' , prop='accessRole')
+            el-input(v-model='form.accessRole', size="large")
+
+        el-form-item
+            router-link(to="/")
+                el-button Regresar
+            el-button(type='primary', native-type="submit", @click="onSubmit('form')") Guardar

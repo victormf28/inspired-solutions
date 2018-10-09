@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-//    publicPath: `<?php echo dirname($this->staticUrl)?>/dashboard/concessionaire/`,
+    //    publicPath: `<?php echo dirname($this->staticUrl)?>/dashboard/concessionaire/`,
     filename: '[name].js'
   },
   module: {
@@ -58,13 +58,13 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js)$/,
-                // loaders: ['eslint-loader'],
+        // loaders: ['eslint-loader'],
         loader: 'standard-loader',
         exclude: /node_modules/,
         options: {
-                    // Emit errors instead of warnings (default = false)
+          // Emit errors instead of warnings (default = false)
           error: false,
-                    // other config options to be passed through to standard e.g.
+          // other config options to be passed through to standard e.g.
           parser: 'babel-eslint'
         }
       },
@@ -106,6 +106,13 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js'
     }
   },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true,
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    port: 4200,
+    quiet: true,
+  },
   performance: {
     hints: false
   },
@@ -132,7 +139,7 @@ module.exports = {
     new FriendlyErrorsPlugin(),
     extractStyles,
     new CopyWebpackPlugin([
-      {from: './src/static/fonts', to: 'static/fonts'}
+      { from: './src/static/fonts', to: 'static/fonts' }
     ])
   ]
 }
